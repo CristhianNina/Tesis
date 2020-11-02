@@ -7,14 +7,37 @@
     tools:context=".ProfileActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="363dp"
-        android:layout_height="201dp"
-        android:layout_marginTop="216dp"
+        android:id="@+id/textViewEmail"
+        android:layout_width="357dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="232dp"
         android:gravity="center"
-        android:text="Estas en la pantalla de profile"
+        android:text="Correo"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="359dp"
+        android:layout_height="147dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="Nombre"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSignOut"
+        android:layout_width="249dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="240dp"
+        android:text="Cerrar Sesión"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
 </androidx.constraintlayout.widget.ConstraintLayout>

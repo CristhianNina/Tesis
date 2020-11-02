@@ -4,33 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".LoginActivity">
 
-    <EditText
-        android:id="@+id/editTextName"
-        android:layout_width="288dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="44dp"
-        android:ems="10"
-        android:hint="Nombre"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.406"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextEmail"
         android:layout_width="288dp"
         android:layout_height="43dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="52dp"
         android:ems="10"
         android:hint="Email"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.406"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editTextPassword"
@@ -47,25 +35,14 @@
 
     <Button
         android:id="@+id/btnLogin"
-        android:layout_width="292dp"
-        android:layout_height="56dp"
+        android:layout_width="293dp"
+        android:layout_height="50dp"
         android:layout_marginTop="44dp"
-        android:text="Registrar"
+        android:text="iniciar sesión"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.423"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
 
-    <Button
-        android:id="@+id/btnSendToLogin"
-        android:layout_width="293dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="20dp"
-        android:background="#F44336"
-        android:text="Ya tengo Cuenta"
-        app:backgroundTint="#E91E63"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

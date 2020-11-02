@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText mEditTextEmail;
     private EditText mEditTextPassword;
     private Button mButtonRegister;
+    private Button mButtonSendToLogin;
 
     //Variables de los datos que se van a registrar
 
@@ -48,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
         mEditTextName = (EditText) findViewById(R.id.editTextName);
         mEditTextEmail = (EditText) findViewById(R.id.editTextEmail);
         mEditTextPassword = (EditText) findViewById(R.id.editTextPassword);
-        mButtonRegister = (Button) findViewById(R.id.btnRegister);
+        mButtonRegister = (Button) findViewById(R.id.btnLogin);
+        mButtonSendToLogin = (Button) findViewById(R.id.btnSendToLogin);
 
         mButtonRegister.setOnClickListener(new View.OnClickListener() { //ebentp para cuando se presione el botón
             @Override
@@ -77,6 +79,17 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        mButtonSendToLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+
+            }
+        });
+
+
     }
 
     private void registerUser(){
@@ -120,4 +133,25 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+
+        if (mAuth.getCurrentUser() != null){        //si el usuario ya inició sesión enviarlo a profile activity
+
+            startActivity(new Intent(MainActivity.this, ProfileActivity.class));
+            finish();
+
+        }
+
+    }
 }
+
+
+
+
+
+
+
+
+
